@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+
+    <!-- Bootstrap / JQUERY below -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Train Station Simulator 2018</h1>
+    </div>
+    <!--  -->
+    <div class=" container">
+        <div class="row">
+
+
+
+            <!-- First Card setting, displaying trains -->
+            <div class="card  train-card" id="train-schedule-card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link train-schedule-tab active" href="#">Current Train Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link add-train-tab" href="#">Add Train</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="card-body">
+
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card train-card" id="add-train-card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link train-schedule-tab" href="#">Current Train Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link add-train-tab active" href="#">Add Train</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <br>
+
+
+                <div class="card-body ">
+                    <form>
+                        <div class="input-group input-group-sm">
+                            <label for="trainNameInput">Train Name</label>
+                            <input type="text" class="form-control" id="train-name-input" placeholder="Pony Express">
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label for="trainDestinationInput">Destination</label>
+                            <input type="text" class="form-control" id="train-destination-input" placeholder="Chicago">
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label for="trainStartTime">First Train Time (HHmm-military time)</label>
+                            <input type="time" class="form-control" id="train-time-input" placeholder="18:85">
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label for="trainFrequencyInput">Frequency (mins)</label>
+                            <input type="number" class="form-control" id="train-frequency-input" placeholder="15">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="new-train-btn">Submit</button>
+                    </form>
+                    <!-- FORM GOES HERE -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts Below this point -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCxKciuZ8vu2UoobZ6Ndh48vd_PuSfk3Ag",
+            authDomain: "train-schedule-project-19e17.firebaseapp.com",
+            databaseURL: "https://train-schedule-project-19e17.firebaseio.com",
+            projectId: "train-schedule-project-19e17",
+            storageBucket: "train-schedule-project-19e17.appspot.com",
+            messagingSenderId: "721316957213"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="assets/logic.js"></script>
+    <script src="assets/firebase.js"></script>
+</body>
+
+</html>

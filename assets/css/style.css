@@ -1,0 +1,21 @@
+body{
+    background-image: url("../images/daniel-von-appen-249638-unsplash.jpg");
+    /* Photo by Daniel von Appen on Unsplash */
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+.train-card{
+    width:100%;
+    opacity:.7;
+}
+.card-header{
+    /* want to change the way that the cards look when clicking tabs... creating this for now. */
+    font-style: bold;
+}
