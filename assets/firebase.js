@@ -56,7 +56,6 @@ trainList.on("child_added", function (childSnapshot, prevChildKey) {
     console.log(trainFrequency);
 
     // // Prettify the employee start
-    // var empStartPretty = moment.unix(empStart).format("MM/DD/YY");
 
     // // Calculate the months worked using hardcore math
     // // To calculate the months worked

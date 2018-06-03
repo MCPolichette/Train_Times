@@ -10,4 +10,6 @@ $(".train-schedule-tab").on("click", function () { hideDisplay("#train-schedule-
 // Window Loading Programing
 window.onload = function (event) {
     $("#add-train-card").hide();
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
+
 }

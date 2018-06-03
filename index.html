@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-
+    <!-- Extra Styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/images/favicon-subway.ico" sizes="16x16" type="ico">
     <!-- Bootstrap / JQUERY below -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
@@ -25,11 +27,9 @@
     <div class=" container">
         <div class="row">
 
-
-
             <!-- First Card setting, displaying trains -->
             <div class="card  train-card" id="train-schedule-card">
-                <div class="card-header">
+                <div class="card-header font-weight-bold bg-warning text-dark">
                     <ul class="nav nav-tabs card-header-tabs">
                         <li class="nav-item">
                             <a class="nav-link train-schedule-tab active" href="#">Current Train Schedule</a>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="card train-card" id="add-train-card">
-                <div class="card-header">
+                <div class="card-header font-weight-bold bg-warning text-dark">
                     <ul class="nav nav-tabs card-header-tabs">
                         <li class="nav-item">
                             <a class="nav-link train-schedule-tab" href="#">Current Train Schedule</a>
@@ -107,6 +107,28 @@
             </div>
         </div>
     </div>
+    <footer class="pagebottom">
+
+        <div class="bottom-center">
+            <a href="http://MCPolichette.github.io">
+                <div class="bottom-name">Mark Polichette</div>
+            </a>
+            <div class="bottom-nav">
+
+                <a href="http://MCPolichette.github.io">
+                    <i id="social-git" class="fa fa-github-square fa-3x social"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mark-polichette/">
+                    <i id="social-linked" class="fa fa-linkedin-square fa-3x social"></i>
+                </a>
+                <a href="mailto:Mark@Polichette.com">
+                    <i id="social-email" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
     <!-- Scripts Below this point -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
